@@ -15,7 +15,7 @@ You are not allowed to collaborate during the sprint challenge.
 - [x] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
 - [x] Open the assignment in Canvas and click on the "Set up git" option (Or, depending, if you see something along the lines of 'Load Sprint Challenge Submission in a new window' click that).
 - [x] Wire your fork to Codegrade using the "Click here for instructions on setting up Git submissions" link, select Github, authorize Github.
-- [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`. MAKE SURE TO PUSH TO MAIN, YOU NO LONGER NEED TO CREATE A NEW BRANCH!!
+- [x] Push your first commit: `git commit --allow-empty -m "first commit" && git push`. MAKE SURE TO PUSH TO MAIN, YOU NO LONGER NEED TO CREATE A NEW BRANCH!!
 - [ ] Make commits often! PUSH TO MAIN!!!
 - [ ] You can run tests locally by running npm run test.
 - [ ] Check to see that Codegrade has accepted your git submission.
@@ -81,6 +81,17 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-1. Describe component state.
-1. Describe props.
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+React is a JavaScript library for building interactive user interfaces. React efficiently updates and renders just the right components when data changes. React is component-based creates composable UIs with reusable components that react to data changes using a render method. A few problems that React solves include managing constantly changing data without bogging down the web browser and also, something I noticed, is that React allows us to combine JavaScript and css and html altogether in one place using JSX and installing additional functionality which is amazing! With websites having constantly changing data and trying to render alllll data every time browsers could not keep up. With react we can use useState and useEffect hooks to only update the data with changing state which significantly helps the browser.
+
+2. Describe component state.
+
+State can be defined as an object of observable properties that control the behavior of a component. The state of a component is an object that holds information that may change over the lifetime of the component. A stateful component holds state data, either as an object placed inside the constructor function or a function component that includes the .useState function. Data is stored on state when it comes into an application in a component used for state management or a component rendering other components. States can only be used in Class Components. State is generally updated by event handlers. A component can maintain internal state data and when the state data changes, the rendered markup will be updated with the render().
+
+3. Describe props.
+
+Props are global variables or objects that hold information to control the behavior of a particular component. Props are set by parent components. A prop is used when we want to pass information held on state inside of a parent component into another component. Props are read-only meaning we do not make changes to props data so that our data flow stays organized and clean. Props are passed from higher level down meaning a child can not pass a prop up to a parent because it has to initialize at the top of the tree first meaning that a child component has no access to props that the higher level component does not have!!!!
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Side effects are anything that affects something outside the scope of the function that is being executed. Examples of side effects are error tracking calls, timers, fetching API data, and manual DOM manipulation. You can sync effects in a React component to changes of certain state or props by passing in a dependency array as the second argument in an effect hook. You can have an empty dependency array or you can pass in data telling the effect to sync up with that data and only fire if that prop changes.
