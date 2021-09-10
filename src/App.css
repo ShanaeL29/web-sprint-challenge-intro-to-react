@@ -1,8 +1,19 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poller One", cursive;
+  font-size: 2.5rem;
 }
 .Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+  color: black;
+  text-shadow: 4px 4px 5px #e89e10;
+}
+@media (max-width: 500px) {
+  .App {
+    font-size: 1rem;
+  }
 }
 /* write your parent styles in here for your App.js */
